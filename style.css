@@ -250,7 +250,6 @@ main {
 
 .trending h5 {
   color: #202020;
-
   font-size: 0.9rem;
 }
 
@@ -263,4 +262,125 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "header" "main" "side-content" "sidebar";
+  }
+
+  header {
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .profile {
+    justify-self: center;
+    padding: 15px 0;
+  }
+  .account {
+    gap: 10px;
+  }
+
+  .search-bar {
+    padding-right: 10px;
+  }
+
+  .search-tab {
+    justify-self: center;
+  }
+
+  .main {
+    padding: 0;
+  }
+
+  main > h3 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 200px);
+    padding: 25px 15px 15px 15px;
+  }
+
+  .side-content {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 15px;
+  }
+
+  .announcements-container,
+  .trending-container {
+    padding: 15px;
+  }
+
+  .announcements-container h3,
+  .trending-container h3 {
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .announcements {
+    padding: 40px 30px;
+  }
+
+  .announcements p {
+    font-size: 0.95rem;
+    padding-bottom: 35px;
+  }
+
+  .announcements h5 {
+    padding-top: 35px;
+    font-size: 1.1rem;
+  }
+
+  .trending {
+    padding: 40px 30px;
+    gap: 50px;
+  }
+
+  .trending p {
+    font-size: 0.95rem;
+  }
+
+  .trending h5 {
+    font-size: 1.1rem;
+  }
+
+  .trending-profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sidebar {
+    grid-template-rows: auto;
+    padding: 20px;
+  }
+
+  .sidebar i {
+    padding: 10px;
+  }
+
+  .logo {
+    letter-spacing: 2px;
+    text-align: left;
+    padding: 20px 5px;
+  }
+
+  .navigation ul,
+  .options ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .navigation ul li,
+  .options ul li {
+    padding: 10px;
+    font-size: 1.25rem;
+  }
 }
